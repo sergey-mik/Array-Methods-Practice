@@ -27,9 +27,9 @@ const contacts = require('./data.json');
 
 //4. the first ten contacts when alphabetically ordered by name
 
-// sort contacts by name in alphabetical order
+// // sort contacts by name in alphabetical order
 // contacts.sort((a, b) => a.name.localeCompare(b.name));
-// filter first ten contacts from the sorted data
+// // filter first ten contacts from the sorted data
 // const firstTenContacts = contacts.slice(0, 10);
 // console.log(firstTenContacts);
 
@@ -57,8 +57,12 @@ const contacts = require('./data.json');
 
 //8. an array of all of the contacts where the friends property
 // is an array with each contact that is their friend
-// const friend = contacts.map(obj => obj.friends)
-// console.log(friend)
+// let friendList = contacts.map((contact) => {
+//     return contact.friends = contact.friends.map((friendId) => {
+//         return contacts.find((cntct) => cntct.id === friendId)
+//     })
+// })
+// console.log(friendList)
 
 //9. the average age of the contacts
 // const averageAge = contacts.reduce((total, person) => total + person.age, 0) / contacts.length
